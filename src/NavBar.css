@@ -1,0 +1,29 @@
+.navBar{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo{
+    font-family: "Noto Serif Hentaigana", serif;
+    font-optical-sizing: auto;
+  font-weight: 488;
+  font-style: normal;
+font-size:80px;
+align-self:center;
+height: 100%;
+color: white;
+  }
+
+  .items{
+    display: flex;
+    gap: 2rem;
+    color: white;
+
+  }
+
+  .items>p{
+    align-self: center;
+
+  }

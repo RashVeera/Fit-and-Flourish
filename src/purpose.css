@@ -1,0 +1,66 @@
+.purposeContainer{
+    height: 45rem;
+    margin-top: 5rem;
+    position: relative;
+    color: white;
+    display: flex;
+}
+
+.purposeLeft{
+    display: flex;
+    flex-direction: column;
+    width: 74%;
+}
+
+.purposeImage{
+    height: 50%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    filter: brightness(0.4);
+}
+
+.purposeDescription{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.purposeDesc1{
+    font-size: 2.5rem;
+    margin-top: 10px;
+    font-family:sans-serif;
+    width: 40%;
+}
+
+.purposeDesc2{
+
+    font-family:sans-serif;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    width:60%;
+}
+
+.purposeRight{
+    background-color: white;
+    height: fit-content;
+    width: 26%;
+    margin: 0rem 1rem 1rem 1rem;
+    color: black;
+    padding: 0.2rem;
+    opacity: 0.6;
+}
+
+.classes{
+    padding: 0.5rem;
+}
+
+.purposeRight>h2{
+    color: blueviolet;
+    font-weight: 900;
+    padding-left: 0.5rem;
+}
+
+.classes>span{
+    font-size: 20px;
+    font-weight: 700;
+}
