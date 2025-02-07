@@ -1,15 +1,20 @@
-import './App.css';
-import Founder from './Founder';
-import NavBar from './NavBar';
-import Purpose from './Purpose';
+
+import Body from './Components/Body';
+import MainPage from './Components/MainPage';
+import {BrowserRouter, Route, Routes} from 'react-router'
+import PlayList from './Components/PlayList';
 
 function App() {
   return (
-  <div className='main-page'>
-    <NavBar/>
-    <Founder/>
-    <Purpose/>
-  </div>
+    <BrowserRouter basename='/'>
+      <Routes>
+        <Route path='/' element={<Body/>}>
+        <Route index element={<MainPage />} />
+          <Route path='/playlist' element={<PlayList/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+ 
   );
 }
 

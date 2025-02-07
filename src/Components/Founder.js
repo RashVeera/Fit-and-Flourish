@@ -1,6 +1,6 @@
 import React from 'react'
-import './Founder.css'
-import mom from "../src/assets/Mom.jpg"
+import '../Styles/Founder.css'
+import mom from "../assets/Mom.jpg"
 
 const Founder = () => {
   return (
@@ -10,7 +10,7 @@ const Founder = () => {
             <p>I'm <span className='highlightFounder'>Ajitha.</span></p>
 
             <p>I help you achieve your fitness goals with my 30-day weight loss challenge while promoting sustainable living through seed banking and terrace farming.</p>
-            <p ><span className='highlight'>CONTACT ME</span></p>
+            <p ><span className='highlight'><a href='#contact'>CONTACT ME</a></span></p>
         </div>
         <div className='founderRight'>
             <img className='founderPic' src={mom} alt={`Founder`}/>

@@ -1,6 +1,6 @@
 import React from 'react'
-import purpose from "../src/assets/purpose.jpg"
-import "./purpose.css"
+import purpose from "../assets/purpose.jpg"
+import "../Styles/purpose.css"
 
 
 const Purpose = () => {

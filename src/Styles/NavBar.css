@@ -25,5 +25,15 @@ color: white;
 
   .items>p{
     align-self: center;
+    cursor: pointer;
+  }
 
+  .items>p:nth-child(2)>a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .items>p>a{
+    color: white;
+    text-decoration: none;
   }
