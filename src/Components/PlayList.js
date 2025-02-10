@@ -1,27 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { playListID } from '../utils/constants'
 import PlayListHeader from './PlayListHeader'
 import PlayListItems from './PlayListItems'
+import { useDispatch, useSelector } from "react-redux";
+import { addplayListItem } from '../utils/PlayListItemSlice';
+
 
 const PlayList = () => {
-  const [playListItems,setplayListItems]=useState("")
+  const dispatch=useDispatch()
+  const selectMovies=useSelector(store=>store.playListItem?.playListItemDetails)
+
+  const fetchAPI=useCallback(
+    async ()=>{
+    const response=await fetch(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playListID}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+    const data =await response.json()
+    dispatch(addplayListItem(data))
+},[dispatch]) 
+
 
   useEffect(()=>{
-    const fetchAPI=async ()=>{
-        const response=await fetch(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=100&playlistId=${playListID}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
-        const data =await response.json()
-        setplayListItems(data)
-    } 
-    fetchAPI()
-  },[])
-  return playListItems!==undefined? (
+    !selectMovies && fetchAPI()
+  },[selectMovies,fetchAPI])
+  console.log(selectMovies)
+  return selectMovies!==null? (
     <div>
         
-        <PlayListHeader data={playListItems}/>
+        <PlayListHeader data={selectMovies}/>
         {  
-          playListItems?.items.map((item)=>{
+          selectMovies?.items.map((item)=>{
          return( (Object.keys(item?.snippet?.thumbnails).length!==0) &&
-            <PlayListItems videoDetails={item}/>
+            <PlayListItems key={item.id} videoDetails={item}/>
           
         )}
           )

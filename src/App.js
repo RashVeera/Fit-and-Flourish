@@ -4,9 +4,12 @@ import MainPage from './Components/MainPage';
 import {BrowserRouter, Route, Routes} from 'react-router'
 import PlayList from './Components/PlayList';
 import Video from './Components/Video';
+import { Provider } from 'react-redux';
+import AppStore from './utils/AppStore';
 
 function App() {
   return (
+    <Provider store={AppStore}>
     <BrowserRouter basename='/'>
       <Routes>
         <Route path='/' element={<Body/>}>
@@ -16,7 +19,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
- 
+    </Provider>
   );
 }
 
