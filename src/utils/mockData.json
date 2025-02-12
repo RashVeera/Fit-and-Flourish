@@ -1,0 +1,33 @@
+
+{
+   "products":[{
+     "name":"Moringa Powder",
+     "price":"700",
+     "image":"/Products/Product1.jpg"
+   },{ "name":"Soup Powder",
+   "price":"800",
+   "image":"/Products/Product2.jpg"},
+  {
+    "name":"Facial Hair Removal Powder",
+    "price":"400",
+    "image":"/Products/Product3.jpg"
+  },
+  {
+    "name":"Herbal Powder",
+    "price":"700",
+    "image":"/Products/Product4.jpg"
+  },
+  {
+    "name":"Rose Powder",
+    "price":"1000",
+    "image":"/Products/Product5.jpg"
+  },
+  {
+    "name":"Henna Powder",
+    "price":"1000",
+    "image":"/Products/Product6.jpg"
+  }
+
+]
+
+}

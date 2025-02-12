@@ -1,0 +1,62 @@
+
+.commentsContainer{
+    display: flex;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.authorImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    align-self: center;
+    align-self: flex-start;
+}
+
+.commentMeta{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.commentMeta>p:nth-child(2){
+    color: gray;
+    font-size: smaller;
+    align-self: center;
+}
+
+.commentMeta>p{
+    margin: 0px;
+}
+
+.commentDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.reply{
+    margin: 0px;
+    font-size: medium;
+    width: 90%;
+
+}
+
+.replyLikeContainer{
+    display: flex;
+    gap: 1rem;
+}
+.replyLikeContainer>i{
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.replyContainer{
+    color: navy;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}

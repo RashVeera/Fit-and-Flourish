@@ -6,6 +6,9 @@ import PlayList from './Components/PlayList';
 import Video from './Components/Video';
 import { Provider } from 'react-redux';
 import AppStore from './utils/AppStore';
+import Products from './Components/Products';
+import Orders from './Components/Orders';
+import Item from './Components/Item';
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
         <Route index element={<MainPage />} />
           <Route path='/playlist' element={<PlayList/>}/>
           <Route path='/video' element={<Video/>}/>
+          <Route path='/products' element={<Products/>}/>
+          <Route path='/orders' element={<Orders/>}/>
+          <Route path='/items' element={<Item/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

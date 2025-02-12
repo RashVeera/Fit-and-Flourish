@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import "../Styles/Video.css"
 import { addvideoDetails } from '../utils/VideoSlice'
 import moment from "moment"
+import Comments from './Comments'
 
 const Video = () => {
     const [searchParams, setSearchParams]=useSearchParams()
@@ -46,6 +47,7 @@ const Video = () => {
         </div> 
         <p className={`videoDesc ${toggle?'smallw':'normalw'}`}>{videoDetails.items[0].snippet.description}</p>
         </div>
+        <Comments videoId={video}/>
     </div>
   ):<></>
 }

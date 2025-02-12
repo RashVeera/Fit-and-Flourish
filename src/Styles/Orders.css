@@ -1,0 +1,20 @@
+.orderContainer{
+    color: white;
+    border: 5px solid gray;
+    width: 100%;
+}
+
+.orderHeader{
+    display: flex;
+    justify-content: space-around;
+}
+
+.itemDetails{
+    display: flex;
+    flex-direction:column ;
+}
+
+.itemDetail{
+    display: flex;
+    justify-content: space-around;
+}
