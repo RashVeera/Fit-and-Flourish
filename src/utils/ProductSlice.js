@@ -19,17 +19,24 @@ const productItem=createSlice({
         },
         removeproductDetails:(state,action)=>{
             const {name}=action.payload
-            if(state.productDetails[name] && state.productDetails[name].quantity>=1){
+            console.log(action.payload)
+            if(state.productDetails[name] && state.productDetails[name].quantity>1){
 
                 state.productDetails[name].quantity-=1
             }
             else{
                 delete state.productDetails[name]
             }
+        },
+        removeProduct:(state,action)=>{
+            const {name}=action.payload
+            if(name){
+                delete state.productDetails[name]
+            }
         }
     }
 })
 
-export const {addproductDetails,removeproductDetails}=productItem.actions
+export const {addproductDetails,removeproductDetails,removeProduct}=productItem.actions
 
 export default productItem.reducer

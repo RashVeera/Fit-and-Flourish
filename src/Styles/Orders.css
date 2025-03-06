@@ -1,20 +1,108 @@
 .orderContainer{
     color: white;
-    border: 5px solid gray;
-    width: 100%;
+    width: 70%;
+    display: grid;
+    flex-direction: column;
+
 }
+
+.orderPage{
+    display: flex;
+    color: white;
+    gap: 3rem;
+}
+
+.totalContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky;
+    top: 3rem;
+    height: 7rem;
+}
+
+.checkOut{
+    background-color: blueviolet;
+    border: none;
+    height:2rem;
+    color: white;
+    cursor: pointer;
+
+}
+
+.total{
+    display: flex;
+    gap: 2rem;
+}
+.removeBtn{
+    width: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.imageItemTag{
+    width: 80px;
+    height: 100px;
+}
+
 
 .orderHeader{
     display: flex;
     justify-content: space-around;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr); /* 3 equal columns */
+    margin-bottom: 1rem;
 }
 
 .itemDetails{
     display: flex;
     flex-direction:column ;
+    display: grid;
+    grid-auto-rows: auto; 
+    gap: 2rem;
+}
+
+.nameTagDetails{
+    color: blueviolet;
+}
+
+.itemTagDetails>span:nth-child(2){
+    font-weight: bold;
+}
+
+.itemTagDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.ItemRow{
+    display: flex;
+    gap: 1rem;
 }
 
 .itemDetail{
     display: flex;
     justify-content: space-around;
+    display: grid;
+    grid-template-columns:2fr repeat(2, 1fr); 
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    padding: 5px 0px;
+}
+
+.itemDetail>span:first-child{
+    text-align: left;
+}
+.itemDetail>span:nth-child(2),.itemDetail>span:nth-child(3){
+    text-align: right;
+}
+.orderHeader>span:first-child{
+    text-align: left;
+}
+.orderHeader>span:nth-child(2),.orderHeader>span:nth-child(3){
+    text-align: right;
+}
+
+.quantityOrder>button{
+    cursor: pointer;
 }

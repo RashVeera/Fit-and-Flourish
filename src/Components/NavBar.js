@@ -11,6 +11,8 @@ const NavBar = () => {
             <p><Link to="/playlist">Playlists</Link></p>
             <p><Link to="/products">Products</Link></p>
             <p><Link to="/orders">Orders</Link></p>
+            <p><Link to="/countdown">Countdown</Link></p>
+
         </div>
 
     </div>

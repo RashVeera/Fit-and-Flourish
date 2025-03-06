@@ -9,6 +9,7 @@ import AppStore from './utils/AppStore';
 import Products from './Components/Products';
 import Orders from './Components/Orders';
 import Item from './Components/Item';
+import Countdown from './Components/Countdown';
 
 function App() {
   return (

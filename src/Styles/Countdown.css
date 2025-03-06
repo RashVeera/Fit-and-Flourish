@@ -1,0 +1,10 @@
+.countdownContainer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+    border:5px solid red;
+    margin-top:150px;
+}
